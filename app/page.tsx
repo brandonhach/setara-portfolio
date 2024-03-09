@@ -53,6 +53,8 @@ export default function Home() {
 							Built by Brandon Hach ©2024 All Rights Reserved.
 							<br />
 							Built with Next.js + TailwindCSS
+							<br />
+							<progress className='progress w-56'></progress>
 						</div>
 						<div>
 							<label className='swap swap-rotate'>
