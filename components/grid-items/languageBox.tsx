@@ -3,9 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const LanguageBox = ({ item }: { item: GridItemInterface }) => {
-	const src = `/${item.image}`;
+	const src = `/image/${item.image}`;
 	return (
-		<div className='relative flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl'>
+		<div className='relative flex flex-col items-center justify-end w-full h-full overflow-hidden rounded-3xl'>
 			{/* Overlay */}
 			{/* <div className='absolute inset-0 z-10 bg-gradient-to-b from-transparent via-neutral-950/60 to-neutral-950/90' /> */}
 			{/* Image */}

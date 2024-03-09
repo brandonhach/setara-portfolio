@@ -191,6 +191,16 @@ const GridItems: GridItemInterface[] = [
 		type: 'picture',
 		image: 'blue-jordans.jpg',
 	},
+	{
+		layout: '2x4',
+		type: 'picture',
+		image: 'city.jpg',
+	},
+	{
+		layout: '2x4',
+		type: 'picture',
+		image: 'buddha.jpg',
+	},
 ];
 export const siteConfig = {
 	creator: 'Brandon Hach',
