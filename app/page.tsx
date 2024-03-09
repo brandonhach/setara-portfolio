@@ -1,16 +1,21 @@
 import { siteConfig } from '@/config/site-config';
 import Image from 'next/image';
 import { MailIcon, MapPin, Sun, Moon } from 'lucide-react';
+import GridItem from '@/components/grid-item';
+import SocialBox from '@/components/grid-items/socialBox';
+import LanguageBox from '@/components/grid-items/languageBox';
+import PictureBox from '@/components/grid-items/pictureBox';
+import ProjectBox from '@/components/grid-items/projectBox';
 
 export default function Home() {
 	return (
 		<main className='flex flex-1 w-full h-full gap-10'>
 			{/* {Left Side} */}
-			<div className='p-8 h-full'>
+			<div className='p-4 h-full'>
 				<div className='flex flex-col h-full rounded-md max-w-md space-y-6'>
 					{/* {Avatar} */}
 					<Image
-						src='/self.jpg'
+						src='/image/self.jpg'
 						width={120}
 						height={120}
 						alt='avatar'
@@ -24,13 +29,14 @@ export default function Home() {
 						{/* { Full Name} */}
 						<h1 className='text-4xl font-bold mt-2'>{siteConfig.creator}</h1>
 						{/* { Bio} */}
-						<p className='text-2xl font-light text-neutral-content'>{siteConfig.bio}</p>
+						<p className='text-2xl font-light text-primary-content'>{siteConfig.bio}</p>
 					</div>
 					{/* {Buttons Container} */}
 					<div className='flex items-center gap-6 justify-between'>
 						<a
 							className='border border-neutral-800 py-1 px-2 rounded-md flex items-center gap-2 w-full'
-							href={siteConfig.locationLink}>
+							href={siteConfig.locationLink}
+							target='_blank'>
 							<MapPin size={16}></MapPin>
 							{siteConfig.location}
 						</a>
@@ -42,17 +48,21 @@ export default function Home() {
 						</a>
 					</div>
 					{/* {Footer} */}
-					<div className='border-neutral-800 text-neutral-500 flex justify-between'>
-						<div>Built by Brandon Hach | ©2024 All Rights Reserved.</div>
+					<div className='border-neutral-800 text-neutral flex justify-between'>
+						<div>
+							Built by Brandon Hach ©2024 All Rights Reserved.
+							<br />
+							Built with Next.js + TailwindCSS
+						</div>
 						<div>
 							<label className='swap swap-rotate'>
 								{/* this hidden checkbox controls the state */}
 								<input type='checkbox' className='theme-controller' value='cmyk' />
 
 								{/* sun icon */}
-								<Sun className='swap-on' size={24} />
+								<Sun className='swap-on' size={24} color='#ff8040' />
 								{/* moon icon */}
-								<Moon className='swap-off' size={24} />
+								<Moon className='swap-off' size={24} color='#ffff80' />
 							</label>
 						</div>
 					</div>
@@ -60,9 +70,30 @@ export default function Home() {
 			</div>
 
 			{/* {Right Side} */}
-			<div className='flex-1 p-6 h-full'>
-				{' '}
-				<div className='flex items-center justify-center h-full rounded-md bg-primary'>Right Side</div>
+			<div className='flex-1 p-4 h-full'>
+				<div className='flex items-center justify-center h-full rounded-md'>
+					{/* {Grid Container} */}
+					<div className='w-full h-full grid grid-cols-4 auto-rows-[76px] gap-10 overflow-y-auto'>
+						{/* {Grid Items} */}
+						{siteConfig.items.map((item, index) => {
+							return (
+								<GridItem key={item.title + index} size={item.layout}>
+									{item.type === 'social' ? (
+										<SocialBox item={item} />
+									) : item.type === 'languages' ? (
+										<LanguageBox item={item} />
+									) : item.type === 'picture' ? (
+										<PictureBox item={item} />
+									) : item.type === 'project' ? (
+										<ProjectBox item={item} />
+									) : (
+										<div>Need to create new component type.</div>
+									)}
+								</GridItem>
+							);
+						})}
+					</div>
+				</div>
 			</div>
 		</main>
 	);
