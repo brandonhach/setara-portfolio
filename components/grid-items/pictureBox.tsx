@@ -2,14 +2,17 @@ import { GridItemInterface } from '@/config/site-config';
 import Image from 'next/image';
 
 const PictureBox = ({ item }: { item: GridItemInterface }) => {
+	const videoSrc = `/video/${item.video}`;
 	const src = `/image/${item.image}`;
-	console.log('Image src:', src);
 	return (
 		<div className='relative w-full h-full overflow-hidden rounded-3xl'>
-			<div>
-				<h1>{item.title}</h1>
-			</div>
-			<Image className='object-cover w-full h-full' src={src ?? ''} alt='' fill />
+			{item.image ? (
+				<Image className='object-cover w-full h-full' src={src} alt='' fill />
+			) : (
+				<video autoPlay loop muted className='z-0 object-cover w-full h-full'>
+					<source src={videoSrc} type='video/mp4' />
+				</video>
+			)}
 		</div>
 	);
 };

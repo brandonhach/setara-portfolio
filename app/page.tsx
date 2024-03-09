@@ -79,7 +79,7 @@ export default function Home() {
 						{/* {Grid Items} */}
 						{siteConfig.items.map((item, index) => {
 							return (
-								<GridItem key={item.title + index} size={item.layout}>
+								<GridItem key={index} size={item.layout}>
 									{item.type === 'social' ? (
 										<SocialBox item={item} />
 									) : item.type === 'languages' ? (

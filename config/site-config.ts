@@ -19,7 +19,7 @@ export type ToolsItem = {
 export interface GridItemInterface {
 	layout: GridItemLayout;
 	type: GridItemType;
-	title: string;
+	title?: string;
 	icon?: string;
 	username?: string;
 	description?: string;
@@ -179,6 +179,17 @@ const GridItems: GridItemInterface[] = [
 		title: 'jordans',
 		type: 'picture',
 		image: 'mclaren.jpg',
+	},
+	{
+		title: 'ferrari',
+		layout: '2x4',
+		type: 'picture',
+		video: 'ferrari-media.mp4',
+	},
+	{
+		layout: '2x4',
+		type: 'picture',
+		image: 'blue-jordans.jpg',
 	},
 ];
 export const siteConfig = {

@@ -10,6 +10,7 @@ const ProjectBox = ({ item }: { item: GridItemInterface }) => {
 				<div className='flex items-center justify-between'>
 					{/* {Icon} */}
 					<Icon type={'github' ?? ''}></Icon>
+					<h1>Project</h1>
 				</div>
 				{/* {Content Container} */}
 				<div className='mt-2'>
