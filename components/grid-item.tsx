@@ -27,8 +27,7 @@ const GridItem = ({ size, children }: GridItemProps) => {
 			className={cn(
 				variants({
 					size,
-					className:
-						'hover:bg-gradient-to-b from-transparent via-neutral-900/10 to-neutral-920/90 hover:border hover:border-accent',
+					className: 'hover:bg-gradient-to-b from-transparent via-neutral-900/10 to-neutral-920/90 ',
 				})
 			)}>
 			{children}
