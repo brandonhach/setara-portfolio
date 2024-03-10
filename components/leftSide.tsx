@@ -5,7 +5,7 @@ import Footer from '@/components/footer';
 
 const LeftSide = () => {
 	return (
-		<div className='flex-1 w-full h-full pt-8 pl-8 xl:max-w-md'>
+		<div className='flex-1 w-full h-full pt-8 xl:pl-8 px-4 xl:max-w-md'>
 			<div className='flex flex-col h-full space-y-6'>
 				{/* {Avatar} */}
 				<Image
