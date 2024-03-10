@@ -41,7 +41,6 @@ const LeftSide = () => {
 						Contact Me
 					</a>
 				</div>
-
 				{/* {Footer} */}
 				<div className='hidden xl:flex'>
 					<Footer></Footer>
