@@ -4,10 +4,10 @@ import Link from 'next/link';
 
 const ProjectBox = ({ item }: { item: GridItemInterface }) => {
 	return (
-		<div>
+		<div className='md:p-8 p-4'>
 			<Link href={item.link ?? ''} target='_blank'>
 				{/* {Header} */}
-				<div className='flex items-center justify-between'>
+				<div className='flex items-center justify-between '>
 					{/* {Icon} */}
 					<Icon type={'github' ?? ''}></Icon>
 					<h1>Project</h1>
