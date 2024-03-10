@@ -197,16 +197,6 @@ const GridItems: GridItemInterface[] = [
 		image: 'blue-jordans.jpg',
 	},
 	{
-		layout: '2x2',
-		type: 'picture',
-		video: 'notion-1.mp4',
-	},
-	{
-		layout: '2x2',
-		type: 'picture',
-		video: 'notion-2.mp4',
-	},
-	{
 		layout: '2x4',
 		type: 'picture',
 		image: 'city.jpg',
