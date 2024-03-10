@@ -24,7 +24,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This website is my portfolio where I can display my interests and projects in a clean and professional aesthetic.
+This website is my portfolio where I can display my interests and projects in a clean and professional aesthetic. The layout style is inspired by Bento.me
 
 ### Built With
 ![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
