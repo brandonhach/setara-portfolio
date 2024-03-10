@@ -10,7 +10,10 @@ const SocialBox = ({ item }: { item: GridItemInterface }) => {
 	return (
 		<div className='relative w-full h-full overflow-hidden rounded-3xl'>
 			<Link href={item.link ?? ''} target='_blank'>
-				<div className='absolute inset-0 z-10 flex flex-col justify-center items-start px-8 py-4'>
+				<div
+					className={`absolute inset-0 z-10 flex flex-col justify-center items-start px-8 py-4 ${
+						item.setBlur ? 'bg-gradient-to-b from-transparent via-neutral-950/80 to-neutral-950/90' : ''
+					}`}>
 					{/* {Header} */}
 					<div className='flex items-center justify-between'>
 						{/* {Icon} */}
@@ -26,16 +29,18 @@ const SocialBox = ({ item }: { item: GridItemInterface }) => {
 						<div className='text-lg font-semibold text-white'>{item.title}</div>
 
 						{/* {Username} */}
-						<div className='text-sm text-gray-400'>{item.username}</div>
-
-						{/* {Description} */}
-						{item.description && <div className='text-sm text-neutral-500'>{item.description}</div>}
+						<div className='text-sm lg:text-md text-neutral-400'>{item.username}</div>
 					</div>
 				</div>
 				{item.image ? (
 					<Image className='object-cover w-full h-full' src={src} alt='' fill />
 				) : (
-					<video autoPlay loop muted className='z-0 object-cover w-full h-full'>
+					<video
+						autoPlay
+						loop
+						muted
+						controlsList='nodownload noplaybackrate nofullscreen'
+						className='z-0 object-cover w-full h-full'>
 						<source src={videoSrc} type='video/mp4' />
 					</video>
 				)}

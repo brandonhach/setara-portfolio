@@ -36,6 +36,7 @@ export interface GridItemInterface {
 	image?: string;
 	video?: string;
 	link?: string;
+	setBlur?: boolean;
 }
 
 const GridItems: GridItemInterface[] = [
@@ -65,6 +66,7 @@ const GridItems: GridItemInterface[] = [
 		username: '@brandonhach',
 		image: 'github.jpg',
 		link: 'https://github.com/brandonhach',
+		setBlur: true,
 	},
 	{
 		layout: '1x2',
@@ -79,8 +81,8 @@ const GridItems: GridItemInterface[] = [
 	{
 		layout: '2x4',
 		type: 'languages',
-		title: 'Languages I used.',
-		title2: 'Frameworks I used.',
+		title: 'Languages:',
+		title2: 'Frameworks:',
 		image: 'jordan.jpg',
 		languages: [
 			{
