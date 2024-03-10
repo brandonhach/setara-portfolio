@@ -132,6 +132,10 @@ const GridItems: GridItemInterface[] = [
 				link: '',
 			},
 			{
+				title: 'Express.js',
+				link: '',
+			},
+			{
 				title: 'TailwindCSS',
 				link: '',
 			},
