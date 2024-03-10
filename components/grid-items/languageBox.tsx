@@ -14,7 +14,9 @@ const LanguageBox = ({ item }: { item: GridItemInterface }) => {
 			{/* Language Content */}
 			<div className='flex flex-col justify-between items-center h-full'>
 				<div className='relative z-20 w-full p-4 space-y-3 md:p-8'>
-					<div className='text-sm font-medium text-white'>{item.title}</div>
+					<div className='xl:backdrop-blur-sm backdrop-blur-md rounded-lg w-fit pr-1'>
+						<div className='text-sm font-medium text-white'>{item.title}</div>
+					</div>
 					<div className='flex flex-wrap items-center gap-3'>
 						{item.languages?.map((language, index) => {
 							return (
@@ -31,12 +33,15 @@ const LanguageBox = ({ item }: { item: GridItemInterface }) => {
 
 				{/* Frameworks Content */}
 				<div className='relative z-20 w-full p-4 space-y-3 md:p-8'>
-					<div className='text-sm font-medium text-white'>{item.title2}</div>
+					<div className='xl:backdrop-blur-sm backdrop-blur-md  rounded-lg w-fit pr-1'>
+						<div className='text-sm font-medium text-white'>{item.title2}</div>
+					</div>
+
 					<div className='flex flex-wrap items-center gap-3'>
 						{item.frameworks?.map((framework, index) => {
 							return (
 								<Link
-									className='px-2 py-1 text-sm font-primary-content rounded-lg bg-base-300'
+									className='px-2 py-1 text-sm text-primary-content rounded-lg bg-base-300'
 									key={framework.link + index}
 									href={framework.link}>
 									{framework.title}
