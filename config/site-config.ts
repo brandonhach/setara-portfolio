@@ -160,27 +160,30 @@ const GridItems: GridItemInterface[] = [
 	},
 	{
 		layout: '1x2',
-		title: 'jordans',
+		title: 'drake',
 		type: 'picture',
 		image: 'drake.jpg',
 	},
 	{
 		layout: '1x2',
-		title: 'jordans',
+		title: 'ferarri steering wheel',
 		type: 'picture',
 		image: 'ferrari.jpg',
+		link: 'https://unsplash.com/photos/black-steering-wheel-in-close-up-photography-t1bJyq-Xfag',
 	},
 	{
 		layout: '1x2',
-		title: 'jordans',
+		title: 'rolex',
 		type: 'picture',
 		image: 'rolex.png',
+		link: 'https://www.youtube.com/watch?v=Prtzy3hEJ2w',
 	},
 	{
 		layout: '1x2',
-		title: 'jordans',
+		title: 'mclaren',
 		type: 'picture',
 		image: 'mclaren.jpg',
+		link: 'https://unsplash.com/photos/red-ferrari-458-italia-on-road-2ihYdRZgyWw',
 	},
 	{
 		title: 'ferrari',
@@ -194,14 +197,47 @@ const GridItems: GridItemInterface[] = [
 		image: 'blue-jordans.jpg',
 	},
 	{
+		layout: '2x2',
+		type: 'picture',
+		video: 'notion-1.mp4',
+	},
+	{
+		layout: '2x2',
+		type: 'picture',
+		video: 'notion-2.mp4',
+	},
+	{
 		layout: '2x4',
 		type: 'picture',
 		image: 'city.jpg',
+		link: 'https://unsplash.com/photos/a-view-of-a-city-at-night-from-a-window-KVa4WFUiQk4',
 	},
 	{
 		layout: '2x4',
 		type: 'picture',
 		image: 'buddha.jpg',
+	},
+
+	{
+		layout: '2x2',
+		title: 'charlotte',
+		type: 'picture',
+		image: 'charlotte.jpg',
+		link: 'https://unsplash.com/photos/aerial-photography-of-city-ABIBm48VYfQ',
+	},
+	{
+		layout: '1x2',
+		title: 'jewelry',
+		type: 'picture',
+		image: 'jewelry.png',
+		link: 'https://www.youtube.com/watch?v=WqfZB_bKdRI',
+	},
+	{
+		layout: '1x2',
+		title: 'vlone',
+		type: 'picture',
+		image: 'vlone.png',
+		link: 'https://www.youtube.com/watch?v=haUi0A4WYqo',
 	},
 ];
 export const siteConfig = {
