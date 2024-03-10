@@ -46,7 +46,7 @@ const GridItems: GridItemInterface[] = [
 		title: 'Resume',
 		icon: 'resume',
 		image: 'resume.jpg',
-		link: 'https://github.com/brandonhach',
+		link: '/pdf/resume.pdf',
 		username: '',
 	},
 	{
