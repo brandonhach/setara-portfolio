@@ -22,11 +22,13 @@ const GridItem = ({ size, children }: GridItemProps) => {
 	return (
 		<motion.div
 			initial={{ opacity: 0, y: 60, scale: 0.8 }}
+			whileInView={{ scale: 1 }}
+			whileHover={{ scale: 1.03 }}
 			className={cn(
 				variants({
 					size,
 					className:
-						'hover:dark:bg-neutral-800 hover:bg-neutral-50 duration-75 transition-colors ease-in-out',
+						'hover:bg-gradient-to-b from-transparent via-neutral-900/10 to-neutral-920/90 hover:border hover:border-accent',
 				})
 			)}>
 			{children}
