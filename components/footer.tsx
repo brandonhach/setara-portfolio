@@ -1,9 +1,17 @@
 import { Sun, Moon } from 'lucide-react';
 const Footer = () => {
 	return (
-		<div className='border-neutral-800 text-neutral flex justify-between w-full'>
-			<div>
-				Built by Brandon Hach ©2024 All Rights Reserved.
+		<div className='border-neutral-800 text-neutral flex justify-between xl:w-5/6'>
+			<div className='hover:cursor-default'>
+				Built by{' '}
+				<a
+					className='inline underline hover:text-base-300'
+					href='https://www.linkedin.com/in/brandon-hach/'
+					target='_blank'
+					rel='noopener noreferrer'>
+					Brandon Hach
+				</a>{' '}
+				©2024 All Rights Reserved.
 				<br />
 				Built with Next.js + TailwindCSS
 				<br />
